@@ -1,2 +1,2 @@
 # MDrude.WebSocket - lightweight WebSocket Server
-TLP async based WebSocket Server C# .NET Core, suggestions are welcome to make the library better, RFC 6455 standard, super lightweight and easy to build upon
+This is a library in order to have a very lightweight C# WebSocket Server in .NET Core with great possibilities to build upon. It uses TLP and async to maximise performance and is based upon RFC 6455 which ensures compatibility. If you have any questions, bugs or suggestions to make the library even better feel free to let me know. Thanks in advance.
