@@ -39,6 +39,23 @@ static void Main(string[] args) {
 }
 ```
 
+## Methods
+### WebSocketServer.Broadcast
+Can be used to send a message Binary/Text to all connected clients.
+```C#
+await server.Broadcast("Hello!");
+await server.Broadcast(WebSocketOpcode.BinaryFrame, new byte[] { 1, 2, 3, 4 });
+```
+
+### WebSocketServer.Start
+This starts the WebSocket Server with current settings and listens for new connections.
+
+### WebSocketServer.Stop
+This stops the WebSocket Server and disconnects all clients currently connected.
+
+### WebSocketUser.Writer.Write
+Send messages to the client. Example can be seen in "Getting Started"
+
 ## Events
 ### OnConnect
 This is called even before the handshake update and should only be used if you know what you want to do with it. At this point you can't yet communicate with the user.
