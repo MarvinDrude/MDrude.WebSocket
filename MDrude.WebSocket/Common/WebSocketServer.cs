@@ -122,7 +122,7 @@ namespace MDrude.WebSocket.Common {
                     Socket = socket,
                     Stream = await GetStream(socket),
                     UID = RandomGen.GenRandomUID(Users, 12),
-
+                    Server = this
                 };
 
                 while(!Users.TryAdd(user.UID, user)) {
@@ -130,6 +130,8 @@ namespace MDrude.WebSocket.Common {
                     user.UID = RandomGen.GenRandomUID(Users, 12);
 
                 }
+
+                user.Writer = new WebSocketWriter(user);
 
                 Logger.DebugWrite("INFO", $"New Socket connected to the WebSocket Server. {(user.Socket.RemoteEndPoint as IPEndPoint).Address}, UID: {user.UID}");
                 OnConnect?.Invoke(this, new ConnectEventArgs(user));
