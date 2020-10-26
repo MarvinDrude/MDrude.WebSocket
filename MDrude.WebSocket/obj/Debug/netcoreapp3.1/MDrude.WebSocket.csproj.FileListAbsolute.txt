@@ -1,0 +1,9 @@
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.csprojAssemblyReference.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.AssemblyInfoInputs.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.AssemblyInfo.cs
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.csproj.CoreCompileInputs.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\netcoreapp3.1\MDrude.WebSocket.deps.json
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\netcoreapp3.1\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\netcoreapp3.1\MDrude.WebSocket.pdb
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\netcoreapp3.1\MDrude.WebSocket.pdb

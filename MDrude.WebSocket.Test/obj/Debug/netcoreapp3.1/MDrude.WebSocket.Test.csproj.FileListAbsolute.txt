@@ -1,0 +1,16 @@
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.csprojAssemblyReference.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.AssemblyInfoInputs.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.AssemblyInfo.cs
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.csproj.CoreCompileInputs.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.exe
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.deps.json
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.runtimeconfig.json
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.runtimeconfig.dev.json
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.dll
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.Test.pdb
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\MDrude.WebSocket.pdb
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.csproj.CopyComplete
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.dll
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.pdb
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.genruntimeconfig.cache

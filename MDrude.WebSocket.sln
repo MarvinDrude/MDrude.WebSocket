@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDrude.WebSocket", "MDrude.WebSocket\MDrude.WebSocket.csproj", "{809EE997-788B-49C5-901E-A3BC1BB27B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDrude.WebSocket.Test", "MDrude.WebSocket.Test\MDrude.WebSocket.Test.csproj", "{C8740149-82C3-4175-98B7-9B135E4B510A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{809EE997-788B-49C5-901E-A3BC1BB27B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809EE997-788B-49C5-901E-A3BC1BB27B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809EE997-788B-49C5-901E-A3BC1BB27B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809EE997-788B-49C5-901E-A3BC1BB27B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8740149-82C3-4175-98B7-9B135E4B510A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8740149-82C3-4175-98B7-9B135E4B510A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8740149-82C3-4175-98B7-9B135E4B510A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8740149-82C3-4175-98B7-9B135E4B510A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD7F95ED-AABB-4D1D-ABB3-7F60A415E2CE}
+	EndGlobalSection
+EndGlobal

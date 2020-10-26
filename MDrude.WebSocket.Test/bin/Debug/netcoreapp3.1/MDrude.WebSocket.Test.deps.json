@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MDrude.WebSocket.Test/1.0.0": {
+        "dependencies": {
+          "MDrude.WebSocket": "1.0.0"
+        },
+        "runtime": {
+          "MDrude.WebSocket.Test.dll": {}
+        }
+      },
+      "MDrude.WebSocket/1.0.0": {
+        "runtime": {
+          "MDrude.WebSocket.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MDrude.WebSocket.Test/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MDrude.WebSocket/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
