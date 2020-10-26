@@ -39,8 +39,6 @@ namespace MDrude.WebSocket.Test {
 
                 await args.User.Writer.Write(WebSocketOpcode.BinaryFrame, new byte[] { 1, 2, 3, 4 });
 
-                await args.User.Writer.WritePing();
-
             };
 
             server.OnMessage += async (e, args) => {

@@ -84,8 +84,31 @@ namespace MDrude.WebSocket.Common {
                 return;
             }
 
+            foreach(var key in Users.Keys) {
+
+                WebSocketUser user;
+
+                if(Users.TryGetValue(key, out user)) {
+
+                    RemoveClient(user, WebSocketDisconnection.ServerShutdown);
+                    user.ListenToken.Cancel();
+
+                }
+
+            }
+
             ListenToken.Cancel();
+
+            try {
+
+                Socket.Shutdown(SocketShutdown.Both);
+
+            } catch(Exception er) {
+
+            }
+
             Running = false;
+
         }
 
         public async Task Broadcast(string data) {
@@ -169,7 +192,7 @@ namespace MDrude.WebSocket.Common {
                 Logger.DebugWrite("INFO", $"Socket successfully handshaked the update. UID: {user.UID}");
                 OnHandshake?.Invoke(this, new HandshakeEventArgs(user));
 
-                while (!user.ListenToken.IsCancellationRequested) {
+                while (Running && !user.ListenToken.IsCancellationRequested) {
 
                     WebSocketFrame frame = await reader.Read(ns, user);
 
