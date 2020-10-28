@@ -11,8 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("MDrude.WebSocket")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Marvin Drude")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Marvin Drude")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("TLP async based WebSocket Server C# .NET Core, suggestions are welcome to make th" +
+    "e library better, RFC 6455 standard, super lightweight and easy to build upon")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MDrude.WebSocket")]
