@@ -14,3 +14,4 @@ C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\net
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.dll
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.pdb
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\obj\Debug\netcoreapp3.1\MDrude.WebSocket.Test.genruntimeconfig.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket.Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
