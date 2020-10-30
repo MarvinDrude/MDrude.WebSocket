@@ -10,6 +10,15 @@ namespace MDrude.WebSocket.Utils {
 
         public static string RandomUIDPool { get; set; } = "abcdefghijklmnopqestuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+        public static string CreateBase64Key() {
+
+            var src = new byte[16];
+            Random.NextBytes(src);
+
+            return Convert.ToBase64String(src);
+
+        }
+
         public static string GenRandomUID<T>(IDictionary<string, T> dict, uint len) {
 
             string result = null;

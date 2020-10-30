@@ -41,6 +41,19 @@ namespace MDrude.WebSocket.Test {
 
             server.Start();
 
+            JsonWebSocketClient client = new JsonWebSocketClient("127.0.0.1", 27789, false);
+
+            client.OnHandshake += async (sender, args) => {
+
+                await client.Writer.Send("testmessage", new TestMessage() {
+                    Name = "Test",
+                    Number = 222
+                });
+
+            };
+
+            client.Connect();
+
             //WebSocketServer server = new WebSocketServer(27789, null);
 
             //server.OnConnect += (e, args) => {

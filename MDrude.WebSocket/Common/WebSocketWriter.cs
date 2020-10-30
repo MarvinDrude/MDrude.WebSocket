@@ -12,10 +12,19 @@ namespace MDrude.WebSocket.Common {
 
         public Stream Stream { get; private set; }
 
+        public Encoding Encoding { get; private set; }
+
         public WebSocketWriter(WebSocketUser user) {
 
             User = user;
             Stream = user.Stream;
+
+        }
+
+        public WebSocketWriter(Stream stream, Encoding encoding) {
+
+            Stream = stream;
+            Encoding = encoding;
 
         }
 
@@ -33,7 +42,18 @@ namespace MDrude.WebSocket.Common {
 
         public async Task WriteText(string text) {
 
-            byte[] data = User.Server.TextFrameEncoding.GetBytes(text);
+            byte[] data;
+
+            if(User != null) {
+
+                data = User.Server.TextFrameEncoding.GetBytes(text);
+
+            } else {
+
+                data = Encoding.GetBytes(text);
+
+            }
+
             await Write(WebSocketOpcode.TextFrame, data);
 
         }

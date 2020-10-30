@@ -34,7 +34,7 @@ namespace MDrude.WebSocket.Common {
 
             }
 
-            if (!WebSocketUtils.IsClientConnected(user)) {
+            if (user != null && !WebSocketUtils.IsClientConnected(user)) {
 
                 return null;
 
