@@ -39,6 +39,9 @@ static void Main(string[] args) {
 }
 ```
 
+## NuGet
+https://www.nuget.org/packages/MDrude.WebSocket/
+
 ## Methods
 ### WebSocketServer.Broadcast
 Can be used to send a message Binary/Text to all connected clients.
