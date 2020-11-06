@@ -1,4 +1,5 @@
-﻿using MDrude.WebSocket.Utils;
+﻿using MDrude.WebSocket.Common;
+using MDrude.WebSocket.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Concurrent;
@@ -105,6 +106,109 @@ namespace MDrude.WebSocket.Extensions {
         public bool Remove(string uid) {
 
             EventEntry entry;
+            return Events.TryRemove(uid, out entry);
+
+        }
+
+    }
+
+    public class EventEmitterServer {
+
+        private ConcurrentDictionary<string, EventEntryServer> Events { get; set; }
+
+        public EventEmitterServer() {
+
+            Events = new ConcurrentDictionary<string, EventEntryServer>();
+
+        }
+
+        public async Task<bool> Emit(string uid, string data, WebSocketUser user) {
+
+            EventEntryServer entry;
+
+            if (Events.TryGetValue(uid, out entry)) {
+
+                foreach (var func in entry.Listeners) {
+
+                    bool err = false;
+
+                    try {
+
+                        DateTime start = DateTime.Now;
+                        object ob = JsonConvert.DeserializeObject(data, func.Type);
+
+                        TimeSpan took = DateTime.Now - start;
+
+                        Logger.DebugWrite("INFO", $"JsonWebSocketServer Type {func.Type.Name} took {took.TotalMilliseconds}ms to parse in EventEmitter.");
+
+                        if (ob != null) {
+
+                            await func.Function(ob, user);
+
+                        } else {
+
+                            err = true;
+
+                        }
+
+                    } catch (Exception) {
+
+                        err = true;
+
+                    }
+
+                    if (err)
+                        Logger.DebugWrite("INFO", $"Error parsing type to type of event listener.");
+
+                }
+
+                return true;
+
+            }
+
+            return false;
+
+        }
+
+        public bool On<T>(string uid, Func<object, WebSocketUser, Task> listener) {
+
+            EventEntryServer entry;
+
+            if (!Events.TryGetValue(uid, out entry)) {
+
+                entry = new EventEntryServer(uid);
+
+            }
+
+            entry.AddListener<T>(listener);
+
+            return Events.TryAdd(uid, entry);
+
+        }
+
+        public bool Remove(string uid, Func<object, WebSocketUser, Task> listener) {
+
+            EventEntryServer entry;
+
+            if (Events.TryGetValue(uid, out entry)) {
+
+                bool removed = entry.RemoveListener(listener);
+
+                if (entry.Listeners.Count == 0) {
+                    Remove(uid);
+                }
+
+                return removed;
+
+            }
+
+            return false;
+
+        }
+
+        public bool Remove(string uid) {
+
+            EventEntryServer entry;
             return Events.TryRemove(uid, out entry);
 
         }

@@ -10,12 +10,12 @@ namespace MDrude.WebSocket.Extensions {
 
     public class JsonWebSocketServer : WebSocketServer {
 
-        public EventEmitter Events { get; private set; }
+        public EventEmitterServer Events { get; private set; }
 
         public JsonWebSocketServer(ushort port = 27789, X509Certificate2 cert = null)
             : base(port, cert) {
 
-            Events = new EventEmitter();
+            Events = new EventEmitterServer();
             InitMessages();
 
         }
@@ -36,7 +36,7 @@ namespace MDrude.WebSocket.Extensions {
                         return;
                     }
 
-                    await Events.Emit(json.UID, json.Data);
+                    await Events.Emit(json.UID, json.Data, args.User);
 
                 }
 

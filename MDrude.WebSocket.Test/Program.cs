@@ -22,7 +22,7 @@ namespace MDrude.WebSocket.Test {
 
             JsonWebSocketServer server = new JsonWebSocketServer(27789, null);
 
-            server.Events.On<TestMessage>("testmessage", async (message) => {
+            server.Events.On<TestMessage>("testmessage", async (message, user) => {
 
                 TestMessage mes = (TestMessage)message;
 

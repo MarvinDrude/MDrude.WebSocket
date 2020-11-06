@@ -6,3 +6,4 @@ C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Release\netcor
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Release\netcoreapp3.1\MDrude.WebSocket.dll
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Release\netcoreapp3.1\MDrude.WebSocket.pdb
 C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Release\netcoreapp3.1\MDrude.WebSocket.csproj.CoreCompileInputs.cache
+C:\Users\marvi\source\repos\MDrude.WebSocket\MDrude.WebSocket\obj\Release\netcoreapp3.1\MDrude.WebSocket.csprojAssemblyReference.cache

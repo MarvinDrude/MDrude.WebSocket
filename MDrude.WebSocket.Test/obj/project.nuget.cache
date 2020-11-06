@@ -4,7 +4,8 @@
   "success": true,
   "projectFilePath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\marvi\\.nuget\\packages\\mdrude.websocket\\1.0.0\\mdrude.websocket.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
