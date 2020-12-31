@@ -9,9 +9,12 @@ namespace MDrude.WebSocket.Events {
 
         public WebSocketUser User { get; private set; }
 
-        public HandshakeEventArgs(WebSocketUser user) {
+        public string Header { get; private set; }
+
+        public HandshakeEventArgs(WebSocketUser user, string header) {
 
             User = user;
+            Header = header;
 
         }
 

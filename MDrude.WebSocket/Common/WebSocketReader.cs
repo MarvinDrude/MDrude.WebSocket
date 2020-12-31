@@ -34,11 +34,11 @@ namespace MDrude.WebSocket.Common {
 
             }
 
-            if (user != null && !WebSocketUtils.IsClientConnected(user)) {
+            //if (user != null && !WebSocketUtils.IsClientConnected(user)) {
 
-                return null;
+            //    return null;
 
-            }
+            //}
 
             try {
 

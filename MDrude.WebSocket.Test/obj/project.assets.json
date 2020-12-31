@@ -2,21 +2,9 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Newtonsoft.Json/12.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        }
-      },
       "MDrude.WebSocket/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/MDrude.WebSocket.dll": {}
         },
@@ -27,37 +15,6 @@
     }
   },
   "libraries": {
-    "Newtonsoft.Json/12.0.3": {
-      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "type": "package",
-      "path": "newtonsoft.json/12.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
     "MDrude.WebSocket/1.0.0": {
       "type": "project",
       "path": "../MDrude.WebSocket/MDrude.WebSocket.csproj",
@@ -70,27 +27,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marvi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\marvi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectUniqueName": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "projectName": "MDrude.WebSocket.Test",
-      "projectPath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectPath": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket.Test\\obj\\",
+      "outputPath": "D:\\WebSockets\\MDrude.WebSocket.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -101,9 +51,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
-              "projectPath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
+            "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
+              "projectPath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
             }
           }
         }
@@ -116,6 +67,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -131,8 +83,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Das Projekt MDrude.WebSocket ist nicht mit netcoreapp3.1 (.NETCoreApp,Version=v3.1) kompatibel. Das Projekt MDrude.WebSocket unterstützt Folgendes: net5.0 (.NETCoreApp,Version=v5.0)",
+      "libraryId": "MDrude.WebSocket",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

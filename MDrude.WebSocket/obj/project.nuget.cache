@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "or4bZiNuCRiJfaL2V95P1o7NUAxBLYLQWLEVfepGZ4O0L01C9xd3jSmO5OcOsnBOgyTZ3XwaJ3mDoGeSpGfW+Q==",
+  "dgSpecHash": "+eWNdlO+Y1icwTmKvpWTndxYXDpAO06aFL0ffwjULp8Ly4k4OMsgr8pbIR5o21aoig55PjJ13exscCKAeRk8sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
+  "projectFilePath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

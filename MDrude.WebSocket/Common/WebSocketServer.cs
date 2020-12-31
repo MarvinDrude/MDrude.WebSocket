@@ -181,8 +181,9 @@ namespace MDrude.WebSocket.Common {
             using (Stream ns = user.Stream) {
 
                 WebSocketReader reader = new WebSocketReader();
+                var res = await InterpretHeader(ns);
 
-                if (!(await InterpretHeader(ns))) {
+                if (!(res.Item1)) {
 
                     RemoveClient(user, WebSocketDisconnection.NoHeader);
                     return;
@@ -190,7 +191,7 @@ namespace MDrude.WebSocket.Common {
                 }
 
                 Logger.DebugWrite("INFO", $"Socket successfully handshaked the update. UID: {user.UID}");
-                OnHandshake?.Invoke(this, new HandshakeEventArgs(user));
+                OnHandshake?.Invoke(this, new HandshakeEventArgs(user, res.Item2));
 
                 while (Running && !user.ListenToken.IsCancellationRequested) {
 
@@ -235,7 +236,7 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        private void RemoveClient(WebSocketUser user, WebSocketDisconnection reason) {
+        public void RemoveClient(WebSocketUser user, WebSocketDisconnection reason) {
 
             WebSocketUser outer;
 
@@ -256,7 +257,7 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        private async Task<bool> InterpretHeader(Stream ns) {
+        private async Task<(bool, string)> InterpretHeader(Stream ns) {
 
             string header = await HttpUtils.ReadHeader(ns);
             Regex getRegex = new Regex(@"^GET(.*)HTTP\/1\.1", RegexOptions.IgnoreCase);
@@ -265,11 +266,11 @@ namespace MDrude.WebSocket.Common {
             if(getRegexMatch.Success) {
 
                 await DoHandshake(ns, header);
-                return true;
+                return (true, header);
 
             }
 
-            return false;
+            return (false, header);
 
         }
 

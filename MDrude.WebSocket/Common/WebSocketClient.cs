@@ -150,7 +150,7 @@ namespace MDrude.WebSocket.Common {
 
                 WebSocketReader reader = new WebSocketReader();
 
-                OnHandshake?.Invoke(this, new HandshakeEventArgs(null));
+                OnHandshake?.Invoke(this, new HandshakeEventArgs(null, null));
 
                 while (Running && !ListenToken.IsCancellationRequested) {
 

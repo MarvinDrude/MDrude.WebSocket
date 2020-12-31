@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "uKQw6KRRdjEl6OIamdJ3yghoefMhVCtct09ltmhOy1WiAZl8equa5bpKnyP9lToaq5l6DeRiPXbLcfjpwDKvkg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\marvi\\source\\repos\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\marvi\\.nuget\\packages\\mdrude.websocket\\1.0.0\\mdrude.websocket.1.0.0.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "NqtmUhm2t61eRAnN5vJtqCmw7K3gqZESmE3r4pH1KH4ruzxO/zdpoKOKyu0VJSJ4i+qSfO0taiwGYq5j4FAl+Q==",
+  "success": false,
+  "projectFilePath": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Das Projekt MDrude.WebSocket ist nicht mit netcoreapp3.1 (.NETCoreApp,Version=v3.1) kompatibel. Das Projekt MDrude.WebSocket unterstützt Folgendes: net5.0 (.NETCoreApp,Version=v5.0)",
+      "libraryId": "MDrude.WebSocket",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
