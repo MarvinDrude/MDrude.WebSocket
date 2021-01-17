@@ -151,8 +151,9 @@ namespace MDrude.WebSocket.Extensions {
 
                         }
 
-                    } catch (Exception) {
+                    } catch (Exception er) {
 
+                        Logger.DebugWrite("ERROR", "err: ", er);
                         err = true;
 
                     }
