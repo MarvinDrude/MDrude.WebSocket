@@ -62,37 +62,45 @@ namespace MDrude.WebSocket.Common {
 
             using (MemoryStream ms = new MemoryStream()) {
 
-                byte bitFin = 0x80;
-                byte first = (byte)(bitFin | (byte)opcode);
+                try {
 
-                byte[] firstData = new byte[] { first };
-                await ms.WriteAsync(firstData, 0, firstData.Length);
+                    byte bitFin = 0x80;
+                    byte first = (byte)(bitFin | (byte)opcode);
 
-                if (data.Length <= 125) {
+                    byte[] firstData = new byte[] { first };
+                    await ms.WriteAsync(firstData, 0, firstData.Length);
 
-                    byte[] secData = new byte[] { (byte)data.Length };
-                    await ms.WriteAsync(secData, 0, secData.Length);
+                    if (data.Length <= 125) {
 
-                } else if (data.Length <= 65535) {
+                        byte[] secData = new byte[] { (byte)data.Length };
+                        await ms.WriteAsync(secData, 0, secData.Length);
 
-                    byte[] secData = new byte[] { 126 };
-                    await ms.WriteAsync(secData, 0, secData.Length);
+                    } else if (data.Length <= 65535) {
 
-                    await WebSocketReaderWriter.WriteNumber(ms, (ushort)data.Length, false);
+                        byte[] secData = new byte[] { 126 };
+                        await ms.WriteAsync(secData, 0, secData.Length);
 
-                } else {
+                        await WebSocketReaderWriter.WriteNumber(ms, (ushort)data.Length, false);
 
-                    byte[] secData = new byte[] { 127 };
-                    await ms.WriteAsync(secData, 0, secData.Length);
+                    } else {
 
-                    await WebSocketReaderWriter.WriteNumber(ms, (ulong)data.Length, false);
+                        byte[] secData = new byte[] { 127 };
+                        await ms.WriteAsync(secData, 0, secData.Length);
+
+                        await WebSocketReaderWriter.WriteNumber(ms, (ulong)data.Length, false);
+
+                    }
+
+                    await ms.WriteAsync(data, 0, data.Length);
+
+                    byte[] buffer = ms.ToArray();
+                    await Stream.WriteAsync(buffer, 0, buffer.Length);
+
+                } catch(Exception er) {
+
+
 
                 }
-
-                await ms.WriteAsync(data, 0, data.Length);
-
-                byte[] buffer = ms.ToArray();
-                await Stream.WriteAsync(buffer, 0, buffer.Length);
 
             }
 

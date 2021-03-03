@@ -163,7 +163,15 @@ namespace MDrude.WebSocket.Common {
 
                 Task task = new Task(async () => {
 
-                    await ListenClient(user);
+                    try {
+
+                        await ListenClient(user);
+
+                    } catch(Exception er) {
+
+                        RemoveClient(user, WebSocketDisconnection.Disconnect);
+
+                    }
                 
                 }, cancel.Token, TaskCreationOptions.LongRunning);
 
