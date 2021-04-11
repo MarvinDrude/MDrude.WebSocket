@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MDrude.WebSocket.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -71,14 +72,24 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        public static async Task<byte[]> Read(Stream stream, uint len) {
+        public static async Task<byte[]> Read(Stream stream, ulong len) {
 
             byte[] buffer = new byte[len];
             int read = 0;
+            int offset = 0;
+            int length = (int)len;
 
-            read = await stream.ReadAsync(buffer, 0, buffer.Length);
+            while(offset < (long)len) {
 
-            if (read < len) {
+                read = await stream.ReadAsync(buffer, offset, length);
+                length -= read;
+                offset += read;
+
+                Logger.DebugWrite("INFO", "One term read: " + read + ", new length = " + length + ", new offset: " + offset);
+
+            }
+
+            if (offset < (long)len) {
 
                 return null;
 

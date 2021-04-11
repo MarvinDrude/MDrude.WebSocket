@@ -16,8 +16,8 @@ namespace MDrude.WebSocket.Extensions {
 
         public event EventHandler<MessageEventArgs> BeforeJsonMessage;
 
-        public JsonWebSocketServer(ushort port = 27789, X509Certificate2 cert = null)
-            : base(port, cert) {
+        public JsonWebSocketServer(string address, ushort port = 27789, X509Certificate2 cert = null)
+            : base(address, port, cert) {
 
             Events = new EventEmitterServer();
             InitMessages();

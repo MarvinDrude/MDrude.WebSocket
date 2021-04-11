@@ -30,6 +30,8 @@ namespace MDrude.WebSocket.Common {
 
             } catch (Exception e) {
 
+                Logger.DebugWrite("FAILED", "Error first byte: ", e);
+
                 return null;
 
             }
@@ -56,7 +58,7 @@ namespace MDrude.WebSocket.Common {
                 byte second = secData[0];
 
                 bool bitMaskSet = (second & bitMaskFlag) == bitMaskFlag;
-                uint length = await ReadLength(stream, second);
+                ulong length = await ReadLength(stream, second);
 
                 if (length != 0) {
 
@@ -88,8 +90,9 @@ namespace MDrude.WebSocket.Common {
                 }
 
             }
-            catch(Exception er) 
-            {
+            catch(Exception er) {
+
+                Logger.DebugWrite("FAILED", "Error read bytes: ", er);
                 return null;
             }
 
@@ -97,29 +100,37 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        public async Task<uint> ReadLength(Stream stream, byte second) {
+        public async Task<ulong> ReadLength(Stream stream, byte second) {
 
             byte dataLengthFlag = 0x7F;
             uint length = (uint)(second & dataLengthFlag);
+            ulong res = 0;
+
+            Logger.DebugWrite("INFO", "Read len: " + length);
 
             if (length == 126) {
 
-                length = await WebSocketReaderWriter.ReadUShort(stream, false);
+                res = await WebSocketReaderWriter.ReadUShort(stream, false);
 
             } else if (length == 127) {
 
-                length = (uint) await WebSocketReaderWriter.ReadULong(stream, false);
+                res = (ulong) await WebSocketReaderWriter.ReadULong(stream, false);
 
                 //Max 500MB
-                if (length < 0 || length > 536870912) {
+                if (length < 0) {
 
                     return 0;
 
                 }
 
-            }
+            } else {
 
-            return length;
+                res = length;
+
+            }
+            Logger.DebugWrite("INFO", "Read len after: " + res + ", Before: " + length);
+
+            return res;
 
         }
 

@@ -15,7 +15,7 @@ namespace MDrude.WebSocket.Utils {
 
                 return !(client.Socket.Poll(1, SelectMode.SelectRead) && client.Socket.Available == 0);
 
-            } catch (Exception e) {
+            } catch (Exception) {
 
                 return false;
 

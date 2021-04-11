@@ -42,9 +42,12 @@ namespace MDrude.WebSocket.Common {
         private Task ListenTask { get; set; }
         private CancellationTokenSource ListenToken { get; set; }
 
-        public WebSocketServer(ushort port = 27789, X509Certificate2 cert = null) {
+        public WebSocketServer(string address, ushort port = 27789, X509Certificate2 cert = null) {
 
-            GetAddress();
+            if (address == null)
+                GetAddress();
+            else
+                Address = IPAddress.Parse(address);
 
             CertificateSsl = cert;
             Port = port;
@@ -168,6 +171,8 @@ namespace MDrude.WebSocket.Common {
                         await ListenClient(user);
 
                     } catch(Exception er) {
+
+                        Logger.DebugWrite("FAILED", "Listen Error: ", er);
 
                         RemoveClient(user, WebSocketDisconnection.Disconnect);
 
@@ -319,6 +324,7 @@ namespace MDrude.WebSocket.Common {
 
             } catch (Exception e) {
 
+                Logger.Write("FAILED", $"SSL Error: ", e);
                 return stream;
 
             }
