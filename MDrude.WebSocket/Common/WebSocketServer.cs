@@ -130,7 +130,7 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        private async Task Listen() {
+        private async void Listen() {
 
             Socket = new Socket(AddressFamily.InterNetworkV6, SocketType.Stream, ProtocolType.Tcp);
 
