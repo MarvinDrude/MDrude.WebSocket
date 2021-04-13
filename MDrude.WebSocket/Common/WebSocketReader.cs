@@ -104,8 +104,6 @@ namespace MDrude.WebSocket.Common {
             uint length = (uint)(second & dataLengthFlag);
             ulong res = 0;
 
-            Logger.DebugWrite("INFO", "Read len: " + length);
-
             if (length == 126) {
 
                 res = await WebSocketReaderWriter.ReadUShort(stream, false);
@@ -126,7 +124,6 @@ namespace MDrude.WebSocket.Common {
                 res = length;
 
             }
-            Logger.DebugWrite("INFO", "Read len after: " + res + ", Before: " + length);
 
             return res;
 

@@ -86,7 +86,7 @@ namespace MDrude.WebSocket.Common {
 
                         string result = await HttpUtils.ReadHeader(Stream);
                         
-                        if(result.ToLower().Contains("upgrade: websocket")) {
+                        if(result != null && result.ToLower().Contains("upgrade: websocket")) {
 
                             ListenToken = new CancellationTokenSource();
                             ListenTask = new Task(Listen, ListenToken.Token, TaskCreationOptions.LongRunning);

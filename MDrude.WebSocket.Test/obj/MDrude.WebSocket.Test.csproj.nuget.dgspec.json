@@ -27,11 +27,7 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
-                "projectPath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -53,61 +49,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
-        "projectName": "MDrude.WebSocket",
-        "projectPath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
-        "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-        "outputPath": "D:\\WebSockets\\MDrude.WebSocket\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.14, 3.1.14]"
             }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
           ],
-          "assetTargetFallback": true,
-          "warn": true,
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

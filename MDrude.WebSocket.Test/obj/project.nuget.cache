@@ -1,18 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZYWtQLIPLtNci3ph+Fx1nQZeCGQD+nJTKy0U2EVvTal2WduJDHaSXRundDvJQxj0idA+XsHNkZhn3zLSt/M+Og==",
-  "success": false,
+  "dgSpecHash": "k0dE8vXbFdrLPL2UP7anT2FOGTKfLUOYQdDslW6eykI4IJlSAdy+qPIMvBZ4AMIbswQyoo2S/u859bgwqtgCyQ==",
+  "success": true,
   "projectFilePath": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Das Projekt MDrude.WebSocket ist nicht mit netcoreapp3.1 (.NETCoreApp,Version=v3.1) kompatibel. Das Projekt MDrude.WebSocket unterstützt Folgendes: net5.0 (.NETCoreApp,Version=v5.0)",
-      "libraryId": "MDrude.WebSocket",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\marvi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.14\\microsoft.netcore.app.host.win-x64.3.1.14.nupkg.sha512"
+  ],
+  "logs": []
 }

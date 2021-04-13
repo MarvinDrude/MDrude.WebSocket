@@ -152,7 +152,15 @@ namespace MDrude.WebSocket.Common {
                 };
 
                 if(user.Stream == null) {
+
+                    try {
+
+                        user.Socket.Shutdown(SocketShutdown.Both);
+
+                    } catch (Exception) { }
+
                     continue;
+
                 }
 
                 while(!Users.TryAdd(user.UID, user)) {
