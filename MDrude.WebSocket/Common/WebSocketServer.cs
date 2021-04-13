@@ -130,7 +130,7 @@ namespace MDrude.WebSocket.Common {
 
         }
 
-        private async void Listen() {
+        private async Task Listen() {
 
             Socket = new Socket(AddressFamily.InterNetworkV6, SocketType.Stream, ProtocolType.Tcp);
 
@@ -150,6 +150,10 @@ namespace MDrude.WebSocket.Common {
                     UID = RandomGen.GenRandomUID(Users, 12),
                     Server = this
                 };
+
+                if(user.Stream == null) {
+                    continue;
+                }
 
                 while(!Users.TryAdd(user.UID, user)) {
 
@@ -324,8 +328,7 @@ namespace MDrude.WebSocket.Common {
 
             } catch (Exception e) {
 
-                Logger.Write("FAILED", $"SSL Error: ", e);
-                return stream;
+                return null;
 
             }
 

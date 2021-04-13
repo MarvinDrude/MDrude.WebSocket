@@ -82,10 +82,9 @@ namespace MDrude.WebSocket.Common {
             while(offset < (long)len) {
 
                 read = await stream.ReadAsync(buffer, offset, length);
+
                 length -= read;
                 offset += read;
-
-                Logger.DebugWrite("INFO", "One term read: " + read + ", new length = " + length + ", new offset: " + offset);
 
             }
 

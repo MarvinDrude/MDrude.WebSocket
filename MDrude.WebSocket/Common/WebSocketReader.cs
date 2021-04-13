@@ -30,8 +30,6 @@ namespace MDrude.WebSocket.Common {
 
             } catch (Exception e) {
 
-                Logger.DebugWrite("FAILED", "Error first byte: ", e);
-
                 return null;
 
             }
