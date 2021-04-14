@@ -9,3 +9,4 @@ D:\WebSockets\MDrude.WebSocket\obj\Release\net5.0\MDrude.WebSocket.csproj.CoreCo
 D:\WebSockets\MDrude.WebSocket\obj\Release\net5.0\MDrude.WebSocket.dll
 D:\WebSockets\MDrude.WebSocket\obj\Release\net5.0\ref\MDrude.WebSocket.dll
 D:\WebSockets\MDrude.WebSocket\obj\Release\net5.0\MDrude.WebSocket.pdb
+D:\WebSockets\MDrude.WebSocket\obj\Release\net5.0\MDrude.WebSocket.csprojAssemblyReference.cache

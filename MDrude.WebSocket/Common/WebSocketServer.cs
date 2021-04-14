@@ -142,7 +142,17 @@ namespace MDrude.WebSocket.Common {
 
             while (Running && !ListenToken.IsCancellationRequested) {
 
-                Socket socket = await Socket.AcceptAsync();
+                Socket socket = null;
+
+                try {
+
+                    socket = await Socket.AcceptAsync();
+
+                } catch(Exception er) {
+
+                    continue;
+
+                }
 
                 WebSocketUser user = new WebSocketUser() {
                     Socket = socket,
