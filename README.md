@@ -40,7 +40,7 @@ static void Main(string[] args) {
 ```
 
 ## NuGet
-https://www.nuget.org/packages/MDrude.WebSocket/
+
 
 ## Methods
 ### WebSocketServer.Broadcast
