@@ -273,16 +273,22 @@ namespace MDrude.WebSocket.Common {
 
         public void RemoveClient(WebSocketUser user, WebSocketDisconnection reason) {
 
-            WebSocketUser outer;
-
-            if(Users.ContainsKey(user.UID))
-                Users.TryRemove(user.UID, out outer);
-
-            user.ListenToken.Cancel();
-
             try {
 
-                user.Socket.Shutdown(SocketShutdown.Both);
+                if(user == null) {
+                    return;
+                }
+
+                WebSocketUser outer;
+
+                if(Users.ContainsKey(user.UID))
+                    Users.TryRemove(user.UID, out outer);
+
+                if(user.ListenToken != null)
+                    user.ListenToken.Cancel();
+
+                if(user.Socket != null)
+                    user.Socket.Shutdown(SocketShutdown.Both);
 
             } catch(Exception) { }
 
