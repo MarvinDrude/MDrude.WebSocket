@@ -20,7 +20,7 @@ namespace MDrude.WebSocket.Test {
 
             Logger.AddDefaultConsoleLogging();
 
-            JsonWebSocketServer server = new JsonWebSocketServer(27789, null);
+            JsonWebSocketServer server = new JsonWebSocketServer("127.0.0.1", 27789, null);
 
             server.Events.On<TestMessage>("testmessage", async (message, user) => {
 
