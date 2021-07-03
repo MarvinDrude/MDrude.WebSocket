@@ -157,7 +157,7 @@ namespace MDrude.WebSocket.Common {
                 WebSocketUser user = new WebSocketUser() {
                     Socket = socket,
                     Stream = await GetStream(socket),
-                    UID = RandomGen.GenRandomUID(Users, 12),
+                    UID = RandomGen.GenRandomUID(Users, 128),
                     Server = this
                 };
 
