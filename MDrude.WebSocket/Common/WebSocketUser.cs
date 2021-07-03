@@ -24,6 +24,8 @@ namespace MDrude.WebSocket.Common {
 
         public WebSocketWriter Writer { get; set; }
 
+        public bool Disconnected { get; set; } = false;
+
         public void Disconnect() {
 
             Server.RemoveClient(this, WebSocketDisconnection.Disconnect);

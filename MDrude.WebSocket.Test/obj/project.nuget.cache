@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "U2Y1r8bl/Yz+wZNIs29gsFmVTXgoA39PtBFhSjEYwTCRjTnf5DLHIVmnqL4OXfnta3DNvDS8j2PlsGSyDAl3ww==",
-  "success": true,
+  "dgSpecHash": "dVPf6cS5qj4XaSQv/IICHppKqABtMGvUJHKvRe6aKkMZS0W/OkgdjrXbyviBPkwCHVT+A0ZHLEz35HupvmN9jA==",
+  "success": false,
   "projectFilePath": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\marvi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
-  ],
-  "logs": []
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project MDrude.WebSocket is not compatible with net5.0 (.NETCoreApp,Version=v5.0). Project MDrude.WebSocket supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "MDrude.WebSocket",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

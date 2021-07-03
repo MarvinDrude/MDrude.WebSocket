@@ -279,6 +279,8 @@ namespace MDrude.WebSocket.Common {
                     return;
                 }
 
+                user.Disconnected = true;
+
                 WebSocketUser outer;
 
                 if(Users.ContainsKey(user.UID))

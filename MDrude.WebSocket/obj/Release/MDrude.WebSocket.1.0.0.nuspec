@@ -4,18 +4,17 @@
     <id>MDrude.WebSocket</id>
     <version>1.0.0</version>
     <authors>Marvin Drude</authors>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
     <description>TLP async based WebSocket Server C# .NET Core, suggestions are welcome to make the library better, RFC 6455 standard, super lightweight and easy to build upon</description>
     <copyright>Marvin Drude</copyright>
     <dependencies>
-      <group targetFramework="net5.0">
+      <group targetFramework="net6.0">
         <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\WebSockets\MDrude.WebSocket\bin\Release\net5.0\MDrude.WebSocket.dll" target="lib\net5.0\MDrude.WebSocket.dll" />
+    <file src="D:\WebSockets\MDrude.WebSocket\bin\Release\net6.0\MDrude.WebSocket.dll" target="lib\net6.0\MDrude.WebSocket.dll" />
   </files>
 </package>

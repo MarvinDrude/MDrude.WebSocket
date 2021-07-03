@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Authors>Marvin Drude</Authors>
     <Description>TLP async based WebSocket Server C# .NET Core, suggestions are welcome to make the library better, RFC 6455 standard, super lightweight and easy to build upon</Description>
     <Copyright>Marvin Drude</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
