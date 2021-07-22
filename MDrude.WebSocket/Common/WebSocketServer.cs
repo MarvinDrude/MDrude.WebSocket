@@ -348,7 +348,7 @@ namespace MDrude.WebSocket.Common {
             try {
 
                 SslStream sslStream = new SslStream(stream, false);
-                await sslStream.AuthenticateAsServerAsync(CertificateSsl, false, SslProtocols.Tls, true);
+                await sslStream.AuthenticateAsServerAsync(CertificateSsl, false, SslProtocols.None, true);
 
                 return sslStream;
 

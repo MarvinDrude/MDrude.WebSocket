@@ -86,7 +86,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -94,7 +94,7 @@
     {
       "code": "NU1201",
       "level": "Error",
-      "message": "Project MDrude.WebSocket is not compatible with net5.0 (.NETCoreApp,Version=v5.0). Project MDrude.WebSocket supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "message": "Das Projekt MDrude.WebSocket ist nicht mit net5.0 (.NETCoreApp,Version=v5.0) kompatibel. Das Projekt MDrude.WebSocket unterstützt Folgendes: net6.0 (.NETCoreApp,Version=v6.0)",
       "libraryId": "MDrude.WebSocket",
       "targetGraphs": [
         "net5.0"

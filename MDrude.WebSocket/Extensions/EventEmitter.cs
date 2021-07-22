@@ -48,7 +48,7 @@ namespace MDrude.WebSocket.Extensions {
 
                         }
 
-                    } catch(Exception) {
+                    } catch(Exception er) {
 
                         err = true;
                            
