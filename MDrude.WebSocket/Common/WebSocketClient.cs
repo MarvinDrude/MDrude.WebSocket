@@ -180,8 +180,20 @@ namespace MDrude.WebSocket.Common {
                             OnPong?.Invoke(this, new PongEventArgs(frame.Data));
 
                             break;
-                        case WebSocketOpcode.TextFrame:
                         case WebSocketOpcode.BinaryFrame:
+
+                            if(frame.Data.Length == 4 && frame.Data[0] == 22
+                                && frame.Data[1] == 23 && frame.Data[2] == 24 && frame.Data[3] == 25) {
+
+                                await OnPingReceived();
+
+                            }
+
+                            OnMessage?.Invoke(this, new MessageEventArgs(null, frame));
+
+                            break;
+
+                        case WebSocketOpcode.TextFrame:
 
                             OnMessage?.Invoke(this, new MessageEventArgs(null, frame));
 
@@ -192,6 +204,12 @@ namespace MDrude.WebSocket.Common {
                 }
 
             }
+
+        }
+
+        private async Task OnPingReceived() {
+
+            await Writer.WriteCustomPong();
 
         }
 

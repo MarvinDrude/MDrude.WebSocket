@@ -110,8 +110,10 @@ var MD = MD || { };
 
             this.socket.onmessage = (message) => {
 
-                if(typeof message.data !== "string") {
+                if (typeof message.data !== "string") {
+
                     return this.emit("binary", message.data);
+
                 }
 
                 try {

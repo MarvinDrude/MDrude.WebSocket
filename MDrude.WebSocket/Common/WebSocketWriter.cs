@@ -40,6 +40,18 @@ namespace MDrude.WebSocket.Common {
 
         }
 
+        public async Task WriteCustomPing() {
+
+            await Write(WebSocketOpcode.BinaryFrame, new byte[] { 22, 23, 24, 25 });
+
+        }
+
+        public async Task WriteCustomPong() {
+
+            await Write(WebSocketOpcode.BinaryFrame, new byte[] { 26, 27, 28, 29 });
+
+        }
+
         public async Task WriteText(string text) {
 
             byte[] data;

@@ -26,11 +26,45 @@ namespace MDrude.WebSocket.Common {
 
         public bool Disconnected { get; set; } = false;
 
+        public RTT RTT { get; private set; } = new RTT();
+
+        public Meta Meta { get; private set; } = new Meta();
+
         public void Disconnect() {
 
             Server.RemoveClient(this, WebSocketDisconnection.Disconnect);
 
         }
+
+    }
+
+    public class Meta {
+
+        public string UserAgent { get; set; } = "None";
+
+        public LastActions LastTime { get; set; } = new LastActions();
+
+    }
+
+    public class LastActions {
+
+        public DateTime Binary { get; set; } = DateTime.UtcNow;
+
+        public DateTime Text { get; set; } = DateTime.UtcNow;
+
+    }
+
+    public class RTT {
+
+        public bool Sending { get; set; } = false;
+
+        public DateTime Sent { get; set; }
+
+        public double Last { get; set; }
+
+        public double Max { get; set; }
+
+        public double Min { get; set; } = -1d;
 
     }
 

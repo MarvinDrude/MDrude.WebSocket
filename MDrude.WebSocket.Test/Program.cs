@@ -21,6 +21,7 @@ namespace MDrude.WebSocket.Test {
             Logger.AddDefaultConsoleLogging();
 
             JsonWebSocketServer server = new JsonWebSocketServer("127.0.0.1", 27789, null);
+            server.RttEnabled = true;
 
             server.Events.On<TestMessage>("testmessage", async (message, user) => {
 
@@ -36,6 +37,13 @@ namespace MDrude.WebSocket.Test {
                     Name = "Marvin",
                     Time = DateTime.Now
                 });
+
+            };
+
+            server.OnRTT += async (sender, args) => {
+
+                var user = args.User;
+                Logger.DebugWrite("INFO", $"RTT Last {user.RTT.Last} / {user.RTT.Min} / {user.RTT.Max}");
 
             };
 
