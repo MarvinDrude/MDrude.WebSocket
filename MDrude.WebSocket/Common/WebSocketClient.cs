@@ -102,7 +102,7 @@ namespace MDrude.WebSocket.Common {
                         ConnectToken.Cancel();
                         return;
 
-                    } catch (Exception er) {
+                    } catch (Exception) {
 
                         Logger.Write("INFO", $"Couldn't connect.");
 
@@ -129,7 +129,7 @@ namespace MDrude.WebSocket.Common {
 
                 Socket.Shutdown(SocketShutdown.Both);
 
-            } catch(Exception er) {
+            } catch(Exception) {
 
             }
 
@@ -249,7 +249,7 @@ namespace MDrude.WebSocket.Common {
 
                 return sslStream;
 
-            } catch (Exception e) {
+            } catch (Exception) {
 
                 return stream;
 

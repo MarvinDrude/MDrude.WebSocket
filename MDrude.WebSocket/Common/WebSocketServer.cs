@@ -125,7 +125,7 @@ namespace MDrude.WebSocket.Common {
 
                 Socket.Shutdown(SocketShutdown.Both);
 
-            } catch(Exception er) {
+            } catch(Exception) {
 
             }
 
@@ -167,7 +167,7 @@ namespace MDrude.WebSocket.Common {
 
                     socket = await Socket.AcceptAsync();
 
-                } catch(Exception er) {
+                } catch(Exception) {
 
                     continue;
 
@@ -475,7 +475,7 @@ namespace MDrude.WebSocket.Common {
 
                 return sslStream;
 
-            } catch (Exception e) {
+            } catch (Exception) {
 
                 return null;
 

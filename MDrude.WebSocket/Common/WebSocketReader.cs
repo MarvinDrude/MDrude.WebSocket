@@ -28,7 +28,7 @@ namespace MDrude.WebSocket.Common {
 
                 first = firstData[0];
 
-            } catch (Exception e) {
+            } catch (Exception) {
 
                 return null;
 

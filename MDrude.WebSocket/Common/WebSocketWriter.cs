@@ -108,7 +108,7 @@ namespace MDrude.WebSocket.Common {
                     byte[] buffer = ms.ToArray();
                     await Stream.WriteAsync(buffer, 0, buffer.Length);
 
-                } catch(Exception er) {
+                } catch(Exception) {
 
 
 

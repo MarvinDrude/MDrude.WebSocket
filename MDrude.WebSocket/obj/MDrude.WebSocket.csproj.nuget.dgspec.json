@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {}
+    "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {}
   },
   "projects": {
-    "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
+    "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
+        "projectUniqueName": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
         "projectName": "MDrude.WebSocket",
-        "projectPath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
+        "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
         "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-        "outputPath": "D:\\WebSockets\\MDrude.WebSocket\\obj\\",
+        "outputPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

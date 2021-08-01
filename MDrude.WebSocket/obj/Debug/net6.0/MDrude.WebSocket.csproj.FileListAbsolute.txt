@@ -10,3 +10,14 @@ D:\WebSockets\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.csproj.CoreComp
 D:\WebSockets\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.dll
 D:\WebSockets\MDrude.WebSocket\obj\Debug\net6.0\ref\MDrude.WebSocket.dll
 D:\WebSockets\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.pdb
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\MDrude.WebSocket.deps.json
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\ref\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\MDrude.WebSocket.pdb
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.AssemblyInfoInputs.cache
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.AssemblyInfo.cs
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.csproj.CoreCompileInputs.cache
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\ref\MDrude.WebSocket.dll
+C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\obj\Debug\net6.0\MDrude.WebSocket.pdb

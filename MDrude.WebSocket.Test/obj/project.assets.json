@@ -70,28 +70,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marvi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\marvi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectUniqueName": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "projectName": "MDrude.WebSocket.Test",
-      "projectPath": "D:\\WebSockets\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-      "outputPath": "D:\\WebSockets\\MDrude.WebSocket.Test\\obj\\",
+      "outputPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
         "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -104,8 +96,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
-              "projectPath": "D:\\WebSockets\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
+            "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
+              "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
             }
           }
         }
