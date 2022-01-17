@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "809ee997-788b-49c5-901e-a3bc1bb27b29": {
+      "ProjectGuid": "809ee997-788b-49c5-901e-a3bc1bb27b29",
+      "DisplayName": "MDrude.WebSocket",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

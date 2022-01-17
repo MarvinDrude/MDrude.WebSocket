@@ -15,6 +15,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\marvi\source\repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\MDrude.WebSocket.dll" target="lib\net6.0\MDrude.WebSocket.dll" />
+    <file src="C:\Users\marvi\Source\Repos\MarvinDrude\MDrude.WebSocket\MDrude.WebSocket\bin\Debug\net6.0\MDrude.WebSocket.dll" target="lib\net6.0\MDrude.WebSocket.dll" />
   </files>
 </package>

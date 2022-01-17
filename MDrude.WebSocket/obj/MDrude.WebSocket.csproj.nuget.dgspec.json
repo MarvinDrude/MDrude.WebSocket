@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {}
+    "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
+    "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
+        "projectUniqueName": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
         "projectName": "MDrude.WebSocket",
-        "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
+        "projectPath": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj",
         "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\obj\\",
+        "outputPath": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\marvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
