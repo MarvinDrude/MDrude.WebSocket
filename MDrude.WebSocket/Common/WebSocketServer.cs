@@ -4,6 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Security;
 using System.Net.Sockets;
@@ -165,40 +166,28 @@ namespace MDrude.WebSocket.Common {
 
                 try {
 
+                    Logger.DebugWrite("INFO", $"Waiting for new connection 1.");
                     socket = await Socket.AcceptAsync();
 
-                } catch(Exception) {
+                } catch(Exception er) {
 
+                    Logger.DebugWrite("FAILED", $"Connection Error Websocket: {er}");
                     continue;
 
                 }
 
                 WebSocketUser user = new WebSocketUser() {
                     Socket = socket,
-                    Stream = await GetStream(socket),
                     UID = RandomGen.GenRandomUID(Users, 128),
                     Server = this
                 };
 
-                if(user.Stream == null) {
-
-                    try {
-
-                        user.Socket.Shutdown(SocketShutdown.Both);
-
-                    } catch (Exception) { }
-
-                    continue;
-
-                }
-
                 while(!Users.TryAdd(user.UID, user)) {
 
-                    user.UID = RandomGen.GenRandomUID(Users, 12);
+                    Logger.DebugWrite("INFO", $"User gen retry uid");
+                    user.UID = RandomGen.GenRandomUID(Users, 128);
 
                 }
-
-                user.Writer = new WebSocketWriter(user);
 
                 Logger.DebugWrite("INFO", $"New Socket connected to the WebSocket Server. {(user.Socket.RemoteEndPoint as IPEndPoint).Address}, UID: {user.UID}");
                 OnConnect?.Invoke(this, new ConnectEventArgs(user));
@@ -221,16 +210,31 @@ namespace MDrude.WebSocket.Common {
                 
                 }, cancel.Token, TaskCreationOptions.LongRunning);
 
-                task.Start();
-
                 user.ListenTask = task;
                 user.ListenToken = cancel;
 
+                task.Start();
+
             }
+
+            Logger.DebugWrite("INFO", $"Ended while accept loop of websocket server.");
 
         }
 
         private async Task ListenClient(WebSocketUser user) {
+
+            user.Stream = await GetStream(user.Socket);
+
+            if (user.Stream == null) {
+
+                Logger.DebugWrite("FAILED", $"User stream null");
+                RemoveClient(user, WebSocketDisconnection.Disconnect);
+
+                return;
+
+            }
+
+            user.Writer = new WebSocketWriter(user);
 
             using (Stream ns = user.Stream) {
 
@@ -377,6 +381,10 @@ namespace MDrude.WebSocket.Common {
 
                         WebSocketUser user = keypair.Value;
 
+                        if(user.Writer == null || user.Socket == null) {
+                            continue;
+                        }
+
                         if(user.RTT.Sending) {
 
                             user.RTT.Last = RttInterval;
@@ -420,15 +428,28 @@ namespace MDrude.WebSocket.Common {
                         int index = line.IndexOf(':') + 1;
 
                         if(index >= line.Length) {
-                            break;
+                            continue;
                         }
 
                         user.Meta.UserAgent = line.Substring(index, line.Length - index).Trim();
 
-                        break;
+                    } else if(line.ToLower().StartsWith("x-forwarded-for:")) {
+
+                        int index = line.IndexOf(':') + 1;
+
+                        if (index >= line.Length) {
+                            continue;
+                        }
+
+                        user.Meta.IP = line.Substring(index, line.Length - index).Trim()
+                            .Split(',').First().Trim();
 
                     }
 
+                }
+
+                if(string.IsNullOrEmpty(user.Meta.IP)) {
+                    user.Meta.IP = ((IPEndPoint)user.Socket.RemoteEndPoint).Address.ToString();
                 }
 
                 await DoHandshake(ns, header);
@@ -468,15 +489,27 @@ namespace MDrude.WebSocket.Common {
 
             }
 
+            SslStream sslStream = null;
+
             try {
 
-                SslStream sslStream = new SslStream(stream, false);
-                await sslStream.AuthenticateAsServerAsync(CertificateSsl, false, SslProtocols.None, true);
+                sslStream = new SslStream(stream, false);
+                var task = sslStream.AuthenticateAsServerAsync(CertificateSsl, false, SslProtocols.None, true);
+                await task.WaitAsync(TimeSpan.FromSeconds(60));
 
                 return sslStream;
 
-            } catch (Exception) {
+            } catch (Exception er) {
 
+                if(sslStream != null) {
+                    await sslStream.DisposeAsync();
+                }
+
+                if(er is TimeoutException) {
+                    Logger.DebugWrite("FAILED", $"TIMEOUT SSL");
+                }
+
+                Logger.DebugWrite("FAILED", $"Certification fail get stream: {er}");
                 return null;
 
             }

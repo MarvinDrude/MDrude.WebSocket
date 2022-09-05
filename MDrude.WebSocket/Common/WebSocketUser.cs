@@ -44,6 +44,12 @@ namespace MDrude.WebSocket.Common {
 
         public LastActions LastTime { get; set; } = new LastActions();
 
+        public string Cookies { get; set; }
+
+        public string SetCookies { get; set; }
+
+        public string IP { get; set; }
+
     }
 
     public class LastActions {

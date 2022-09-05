@@ -5,10 +5,14 @@
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "MDrude.WebSocket/1.0.0": {
@@ -76,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectUniqueName": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "projectName": "MDrude.WebSocket.Test",
-      "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
+      "projectPath": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\MDrude.WebSocket.Test.csproj",
       "packagesPath": "C:\\Users\\marvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\obj\\",
+      "outputPath": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,14 +99,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
-              "projectPath": "C:\\Users\\marvi\\Source\\Repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
+            "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj": {
+              "projectPath": "C:\\Users\\marvi\\source\\repos\\MarvinDrude\\MDrude.WebSocket\\MDrude.WebSocket\\MDrude.WebSocket.csproj"
             }
           }
         }
@@ -122,7 +127,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -131,7 +137,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
